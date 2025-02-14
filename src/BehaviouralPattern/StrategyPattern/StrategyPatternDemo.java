@@ -1,0 +1,25 @@
+package BehaviouralPattern.StrategyPattern;
+
+import BehaviouralPattern.StrategyPattern.ConcreteStrategy.CashStrategy;
+import BehaviouralPattern.StrategyPattern.ConcreteStrategy.CreditCardStrategy;
+import BehaviouralPattern.StrategyPattern.ConcreteStrategy.UpiStrategy;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class StrategyPatternDemo {
+    public static void main(String[] args) {
+        /// BEHAVIOURAL--> STRATEGY PATTERNs
+        List<PaymentContext> paymentContextList =  new ArrayList<>();
+        paymentContextList.add(new PaymentContext(new CashStrategy()));
+        paymentContextList.add(new PaymentContext(new CreditCardStrategy()));
+        paymentContextList.add(new PaymentContext(new UpiStrategy()));
+
+        for(PaymentContext paymentContext : paymentContextList){
+            paymentContext.pay();
+        }
+
+
+
+    }
+}
