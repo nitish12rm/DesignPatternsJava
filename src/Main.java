@@ -10,7 +10,7 @@ import java.util.List;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        /// BEHAVIOURAL--> STRATEGY PATTERN
+        /// BEHAVIOURAL--> STRATEGY PATTERNs
         List<PaymentContext> paymentContextList =  new ArrayList<>();
         paymentContextList.add(new PaymentContext(new CashStrategy()));
         paymentContextList.add(new PaymentContext(new CreditCardStrategy()));
